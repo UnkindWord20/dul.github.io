@@ -1,0 +1,63 @@
+.uv {
+    margin: 0;
+    padding: 0;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    margin-top: 10%;
+    font-family: 'Lora', serif;
+    text-align: center;
+}
+
+.spacer2 {
+    height: 5%;
+}
+
+.heart {
+    width: 50px;
+    height: 50px;
+    transform: rotate(45deg);
+    background: #f20044;
+    top: 15rem;
+    left: 15rem;
+    box-shadow: 10px 10px 90px #f20044;
+    animation: beating 2s ease infinite;
+}
+
+.heart:before,
+.heart:after {
+    content: "";
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background: #f20044;
+    position: absolute;
+    box-shadow: 10px 10px 90px #f20044;
+}
+
+@keyframes beating {
+    0% {
+        transform: rotate(45deg) scale(1);
+    }
+
+    50% {
+        transform: rotate(45deg) scale(2);
+    }
+
+    100% {
+        transform: rotate(45deg) scale(1);
+    }
+}
+
+.heart:before {
+    top: 0;
+    left: -25px;
+}
+
+.heart:after {
+    top: -25px;
+}
